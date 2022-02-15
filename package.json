@@ -1,0 +1,22 @@
+{
+  "name": "sunnyside-agency",
+  "version": "1.0.0",
+  "description": "implementation of a design for an agency",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w src/sass/:public/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabver82/sunnyside-agency.git"
+  },
+  "author": "Fabien Vermeiren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabver82/sunnyside-agency/issues"
+  },
+  "homepage": "https://github.com/fabver82/sunnyside-agency#readme",
+  "dependencies": {
+    "sass": "^1.49.7"
+  }
+}
