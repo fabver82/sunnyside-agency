@@ -126,4 +126,48 @@ main {
   width: 100%;
 }
 
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials__title {
+  text-transform: uppercase;
+  font-family: Fraunces;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  color: #a7abae;
+  font-size: 1rem;
+}
+
+.testimonials__person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials__person .person__image {
+  border-radius: 50%;
+  width: 25%;
+  margin: 1.5rem auto;
+}
+.testimonials__person .person__text {
+  margin: 1rem 1rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  color: #5a636c;
+}
+.testimonials__person .person__name {
+  color: #23303e;
+  font-weight: 900;
+}
+.testimonials__person .person__position {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #a7abae;
+}
+
 /*# sourceMappingURL=base.css.map */
