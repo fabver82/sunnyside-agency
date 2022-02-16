@@ -1,3 +1,54 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("/public/fonts/Barlow-Regular.ttf");
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/public/fonts/Fraunces-Black.ttf");
+}
+* {
+  font-size: 18px;
+}
 
+.header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  color: white;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 1rem;
+}
+.header__nav--title {
+  font-family: Fraunces;
+  font-weight: 900;
+}
+.header__nav--icon-menu {
+  font-size: 0.2rem;
+}
+.header__text {
+  font-family: Fraunces;
+  font-weight: 700;
+  padding: 0 2rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+.header__arrow {
+  position: relative;
+  left: 50%;
+  top: 5.5rem;
+  transform: translateX(-50%);
+}
+.header__image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
 
 /*# sourceMappingURL=base.css.map */
