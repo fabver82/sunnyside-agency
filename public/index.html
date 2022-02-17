@@ -15,8 +15,17 @@
         <header class="header">
             <nav class="header__nav">
                 <p class="header__nav--title">sunnyside</p>
+                <!-- burger menu -->
+                <input type="checkbox" class="header__nav-burger-click">
                 <img class="header__nav--icon-menu" src ="./icons/icon-hamburger.svg" alt="Mobile Menu link"/>
+                <ul class="header__nav-burger-menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </nav>
+            
             <h1 class="header__text">WE ARE CREATIVES</h1>
             <img class="header__arrow" src="./icons/icon-arrow-down.svg" alt="Arrow Down"/>
             <!-- <img class="header__image"
@@ -77,31 +86,31 @@
         </section>
 
         <!-- gallery -->
-        <section>
-            <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="milkbottles in the sky"/>
-            <img src="./images/mobile/image-gallery-orange.jpg" alt="orange on a white plate with orange background"/>
-            <img src="./images/mobile/image-gallery-cone.jpg" alt="ice cream cone on light blue background"/>
-            <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="sugar cube on pink background"/>
+        <section class="gallery">
+            <img class="gallery__image" src="./images/mobile/image-gallery-milkbottles.jpg" alt="milkbottles in the sky"/>
+            <img class="gallery__image" src="./images/mobile/image-gallery-orange.jpg" alt="orange on a white plate with orange background"/>
+            <img class="gallery__image" src="./images/mobile/image-gallery-cone.jpg" alt="ice cream cone on light blue background"/>
+            <img class="gallery__image" src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="sugar cube on pink background"/>
         </section>
 
         <!-- footer -->
-        <!-- <footer>
+        <footer class="footer">
 
-            <p>sunnyside</p>
+            <p class="footer__title">sunnyside</p>
         
-            <nav>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Projects</a>
-            </nav>
+            <ul class="footer__links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
     
-            <ul>
+            <ul class="footer__socials">
                 <li><a href="#"><img src="./icons/icon-facebook.svg" alt="facebook icon"></a></li>
                 <li><a href="#"><img src="./icons/icon-instagram.svg" alt="instagram icon"></a></li>
                 <li><a href="#"><img src="./icons/icon-twitter.svg" alt="twitter icon"></a></li>
                 <li><a href="#"><img src="./icons/icon-pinterest.svg" alt="pinterest icon"></a></li>
             </ul>
-        </footer> -->
+        </footer>
     </main>
 </body>
 </html>

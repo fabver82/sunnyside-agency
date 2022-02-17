@@ -5,12 +5,14 @@ $primary-blue:hsl(198, 62%, 26%);
 $primary-moderate-cyan:hsl(168, 34%, 41%);
 
 $secondary-desat-blue:hsl(212, 27%, 19%);
-$secondary-very-dark-gray-blue:hsl(213, 9%, 39%);;
+$secondary-very-dark-gray-blue:hsl(213, 9%, 39%);
 $secondary-dark-gray-blue:hsl(232, 10%, 55%);
 $secondary-gray-blue:hsl(210, 4%, 67%);
 $secondary-white:hsl(0, 0%, 100%);
 
 $base-font-size:18px;
+
+
 
 @font-face {
   font-family: "Barlow";
@@ -22,6 +24,7 @@ $base-font-size:18px;
  }
  *{
    font-size:$base-font-size ;
+   box-sizing: border-box;
  }
  html{
   //  height: 100%;
@@ -71,6 +74,37 @@ main{
       &--icon-menu{
         font-size:0.2rem;
       }
+      &-burger-click{
+        position:absolute;
+        left:90%;
+        opacity:0;
+      }
+      &-burger-menu{
+        display:none;
+        position:absolute;
+        top:2rem;
+        background-color:$secondary-white;
+        width:90%;
+        list-style:none;
+        >li{
+          text-align: center;
+          padding:1rem;
+          >a:link{
+            color:black;
+            text-decoration: none;
+          }
+          >a:hover{
+            background-color: $primary-yellow;
+            padding:0.5rem;
+            border-radius: 20px;
+          }
+        }
+
+      }
+      &-burger-click:checked ~ &-burger-menu{
+        display:block;
+      }
+      
     }
     &__text{
       font-family: Fraunces;
@@ -192,11 +226,11 @@ main{
     width:25%;
     margin:1.5rem auto;
   }
-  // TODO:check text align and typos
   .person__text{
     margin:1rem 1rem;
     font-weight: 600;
     line-height: 1.4rem;
+    text-align: center;
     color:$secondary-very-dark-gray-blue;
   }
   .person__name{
@@ -209,7 +243,63 @@ main{
     color:$secondary-gray-blue;
   }
 }
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  margin:0px;
+  &__image{
+    margin:0;
+    padding:0;
+    width:50vw;
+  }
+}
 
+.footer{
+  margin:0px;
+  background-color: $primary-moderate-cyan;
+  color: $primary-cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title{
+    font-family: Barlow; //FIXME:
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  &__links{
+    list-style: none;
+    width:100%;
+    text-align: center;
+    padding:0;
+    >li{
+      margin-left:1.3rem;
+      margin-right:1.3rem;
+      display:inline-block;
+      >a:link{
+        text-decoration: none;
+        color: $primary-cyan;
+      }
+      a:hover{
+        color:$secondary-white;
+      }
+    }
+  }
+  &__socials{
+    list-style: none;
+    padding:0;
+    >li{
+      margin:0.6rem;
+      display: inline-block;
+      >a:hover{
+        color:$secondary-white;
+      }
+    }
+    
+  }
+  
+}
 
 
 
