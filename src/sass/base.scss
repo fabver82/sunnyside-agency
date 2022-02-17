@@ -12,8 +12,6 @@ $secondary-white:hsl(0, 0%, 100%);
 
 $base-font-size:18px;
 
-
-
 @font-face {
   font-family: "Barlow";
   src: url("/public/fonts/Barlow-Regular.ttf"),
@@ -35,27 +33,54 @@ body{
   // width: 100%;
   // height:100%;
   // max-width: 100%;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
-main{
-  // height: 100%;
-  // position: absolute;
-  // top:0px;
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: repeat(5, 1fr);
-  // grid-column-gap: 0px;
-  // grid-row-gap: 0px; 
+
+//mobile
+
+//tablet
+@media only screen and (min-width:375px){
+  // #container{
+  //   display:grid;
+  //   grid-template-columns: repeat(4,1fr);
+  // }
+  
+  // .col12{
+  //   grid-column: 1 2;
+  //   width:50vw;
+  //   height:100vh;
+  // }
+  // .col34{
+  //   grid-column: 3 4;
+  //   width:50vw;
+  //   height:100vh;
+  // }
 }
+
+//desktop
+@media only screen and (min-width:1440px){
+  // main{
+  //   grid-template-columns: repeat(4,1fr);
+  //   grid-template-rows:repeat(7,1fr);
+  // }
+}
+
 
 .header{
     // border:1px solid red;
-    // position: relative;
-    // top: 0px;
-    // left:0px;
+
+    position: relative;
+    top: 0px;
+    left:0px;
     color:$secondary-white;
-    
-    background-image: url("../images/mobile/image-header.jpg");
+    @media only screen and (max-width: 375px){
+      background-image: url("../images/mobile/image-header.jpg");
+    }
+    @media only screen and (min-width: 375px){
+      background-image: url("../images/desktop/image-header.jpg");
+    }
+    // background-image: -webkit-image-set("../images/mobile/image-header.jpg" 1x, "../images/desktop/image-header.jpg" 1.3x);
+    // background-image: image-set("../images/mobile/image-header.jpg" 1x,"../images/dektop/image-header.jpg" 1.3x);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -122,47 +147,73 @@ main{
       transform: translateX(-50%);
     }
 }
-.info-section{
-  display:flex;
-  flex-direction: column;
-  top:0px;
-  left:0px;
-  align-items: center;
-  &__image{
-    width:100%;
-    height:auto;
-  }
-  &__title{
-    font-family: Fraunces;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin:2rem 2rem;
-    text-align:center;
-  }
-  &__text{
-    text-align: center;
-    color: $secondary-gray-blue;
-    line-height: 1.2;
-    margin:auto 2rem;
-  }
-  &__link{
-    text-align: center;
-    font-size: 0.8rem;
-    margin:1rem auto;
-    text-decoration: none;
-    font-weight: bold;
-    &:link{
-      color:$secondary-desat-blue;
+@media only screen and (max-width:375px){
+  .info-section{
+    // width:50vw;
+    display:flex;
+    flex-direction: column;  
+    top:0px;
+    left:0px;
+    align-items: center;
+    &__image{
+      width:100%;
+      height:auto;
     }
-    &:hover{
-      text-decoration: underline solid $primary-red 0.2rem;
+    &__title{
+      font-family: Fraunces;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin:2rem 2rem;
+      text-align:center;
+    }
+    &__text{
+      text-align: center;
+      color: $secondary-gray-blue;
+      line-height: 1.2;
+      margin:auto 2rem;
+    }
+    &__link{
+      text-align: center;
+      font-size: 0.8rem;
+      margin:1rem auto;
+      text-decoration: none;
+      font-weight: bold;
+      &:link{
+        color:$secondary-desat-blue;
+      }
+      &:hover{
+        text-decoration: underline solid $primary-red 0.2rem;
+      }
     }
   }
 }
+@media only screen and (min-width:375px){
+  .info-section{
+    position:relative;
+    top:0px;
+    left:0px;
+    &__image{
+      position:relative;
+      width:50%;
+      // TODO:image on the left or the right
+      &--left{
+        float:left;
+      }
+      &--right{
+        float:right;
+      }
+    }
+    &__title,&__text,&__link{
+      max-width:50%;
+    }
+  }
+}
+
+
 .info-section-bkg{
   // background: url("../images/mobile/image-graphic-design.jpg") no-repeat bottom/cover;
     // width: 100%;
-    height:100%;
+    height:100vh;
     position:relative;
     margin:0px;
     &__title{
@@ -200,6 +251,7 @@ main{
       
     }
 }
+
 .testimonials{
   display:flex;
   flex-direction: column;
@@ -243,6 +295,7 @@ main{
     color:$secondary-gray-blue;
   }
 }
+
 .gallery{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
