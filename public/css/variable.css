@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("/public/fonts/Barlow-Regular.ttf");
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/public/fonts/Fraunces-Black.ttf");
+}
+* {
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=variable.css.map */
