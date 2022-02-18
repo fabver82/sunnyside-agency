@@ -103,12 +103,49 @@ body{
   .grid-container{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    // .info-image{
-    //   width:100%;
-    // }
+    .info-image{
+      width:100%;
+    }
     .info-section{
+      display:flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
       &__image{
         width:100%;
+      }
+      &__title{
+        font-family: Fraunces;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin:1rem 1rem;
+        text-align:left;
+      }
+      &__text{
+        text-align: left;
+        font-size:0.7rem;
+        color: variable.$secondary-dark-gray-blue;
+        line-height: 1.2;
+        margin-top:1rem;
+        margin-left:1rem;
+      }
+      &__link{
+        text-align: left;
+        font-size: 0.5rem;
+        margin-top:1rem;
+        margin-left:1rem;
+        text-decoration: none;
+        font-weight: bold;
+        &:link{
+          color:variable.$secondary-desat-blue;
+        }
+        &:hover{
+          text-decoration: underline solid variable.$primary-red 0.2rem;
+          
+        }
+        &--yellow:hover{
+          text-decoration: underline solid variable.$primary-yellow 0.2rem;
+        }
       }
       // border: 1px solid red;  
     }
@@ -121,28 +158,27 @@ body{
       margin:0px;
       &__title{
         position:absolute;
-        top:65%;
+        top:35%;
         left:50%;
         transform: translateX(-50%);
-  
         font-family: Fraunces;
         color:variable.$secondary-very-dark-gray-blue;
         width:100%;
         text-align: center;
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 0.8rem;
         // z-index: -1;
       }
       // TODO:modify positionning
       &__text{
         position:absolute;
-        top:75%;
+        top:40%;
         left:50%;
         transform: translateX(-50%);
         width:90%;
   
         font-family: Barlow;
-        font-size:0.8rem;
+        font-size:0.5rem;
         font-weight: 600;
         text-align: center;
         color: variable.$secondary-very-dark-gray-blue;
