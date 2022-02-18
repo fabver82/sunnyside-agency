@@ -318,7 +318,7 @@ body {
 }
 
 .footer {
-  margin: 0px;
+  padding-top: 1rem;
   background-color: #458c7e;
   color: #25564b;
   display: flex;
@@ -326,10 +326,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-.footer__title {
-  font-family: Barlow;
-  font-size: 1.5rem;
-  font-weight: 900;
+.footer__logo {
+  fill: #25564b;
+  color: #25564b;
+  filter: brightness(70%) saturate(130%);
+  -webkit-filter: brightness(70%) saturate(130%);
+  -moz-filter: brightness(70%) saturate(130%);
 }
 .footer__links {
   list-style: none;
@@ -357,8 +359,10 @@ body {
   margin: 0.6rem;
   display: inline-block;
 }
-.footer__socials > li > a:hover {
-  color: white;
+.footer__socials > li > a:hover > img {
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+  -moz-filter: brightness(0) invert(1);
 }
 
 /*# sourceMappingURL=base.css.map */

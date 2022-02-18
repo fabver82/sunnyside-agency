@@ -231,17 +231,19 @@ body{
 }
 
 .footer{
-  margin:0px;
+  padding-top:1rem;
   background-color: variable.$primary-moderate-cyan;
   color: variable.$primary-cyan;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  &__title{
-    font-family: Barlow; //FIXME:
-    font-size: 1.5rem;
-    font-weight: 900;
+  &__logo{
+    fill: variable.$primary-cyan;
+    color:variable.$primary-cyan;
+    filter: brightness(70%) saturate(130%);
+    -webkit-filter: brightness(70%) saturate(130%);
+    -moz-filter: brightness(70%) saturate(130%)
   }
   &__links{
     list-style: none;
@@ -258,6 +260,7 @@ body{
       }
       a:hover{
         color:variable.$secondary-white;
+        
       }
     }
   }
@@ -268,7 +271,11 @@ body{
       margin:0.6rem;
       display: inline-block;
       >a:hover{
-        color:variable.$secondary-white;
+        >img{
+          filter:brightness(0) invert(1);
+          -webkit-filter: brightness(0) invert(1);
+          -moz-filter: brightness(0) invert(1); 
+        }
       }
     }
     
