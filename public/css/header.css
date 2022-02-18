@@ -60,7 +60,9 @@
 @media only screen and (max-width: 375px) {
   .header__nav-burger-menu {
     display: none;
+    padding: 0px;
     position: absolute;
+    z-index: 5;
     top: 2rem;
     background-color: white;
     width: 90%;

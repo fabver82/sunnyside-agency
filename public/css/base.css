@@ -60,7 +60,9 @@
 @media only screen and (max-width: 375px) {
   .header__nav-burger-menu {
     display: none;
+    padding: 0px;
     position: absolute;
+    z-index: 5;
     top: 2rem;
     background-color: white;
     width: 90%;
@@ -161,6 +163,9 @@ body {
   }
   .info-section__link:hover {
     text-decoration: underline solid #fe7867 0.2rem;
+  }
+  .info-section__link--yellow:hover {
+    text-decoration: underline solid #fad400 0.2rem;
   }
 
   .info-section-bkg {

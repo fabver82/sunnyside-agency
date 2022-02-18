@@ -47,7 +47,9 @@
       &-burger-menu{
         @media only screen and (max-width: 375px){
             display:none;
+            padding:0px;
             position:absolute;
+            z-index: 5;
             top:2rem;
             background-color:variable.$secondary-white;
             width:90%;
