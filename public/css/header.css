@@ -42,34 +42,65 @@
   font-family: Fraunces;
   font-weight: 900;
 }
-.header__nav--icon-menu {
-  font-size: 0.2rem;
+@media only screen and (max-width: 375px) {
+  .header__nav--icon-menu {
+    font-size: 0.2rem;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .header__nav--icon-menu {
+    display: none;
+  }
 }
 .header__nav-burger-click {
   position: absolute;
   left: 90%;
   opacity: 0;
 }
-.header__nav-burger-menu {
-  display: none;
-  position: absolute;
-  top: 2rem;
-  background-color: white;
-  width: 90%;
-  list-style: none;
+@media only screen and (max-width: 375px) {
+  .header__nav-burger-menu {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    background-color: white;
+    width: 90%;
+    list-style: none;
+  }
+  .header__nav-burger-menu > li {
+    text-align: center;
+    padding: 1rem;
+  }
+  .header__nav-burger-menu > li > a:link {
+    color: black;
+    text-decoration: none;
+  }
+  .header__nav-burger-menu > li > a:hover {
+    background-color: #fad400;
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
 }
-.header__nav-burger-menu > li {
-  text-align: center;
-  padding: 1rem;
-}
-.header__nav-burger-menu > li > a:link {
-  color: black;
-  text-decoration: none;
-}
-.header__nav-burger-menu > li > a:hover {
-  background-color: #fad400;
-  padding: 0.5rem;
-  border-radius: 20px;
+@media only screen and (min-width: 375px) {
+  .header__nav-burger-menu li {
+    display: inline;
+    list-style: none;
+    text-align: center;
+    padding: 0.4rem;
+  }
+  .header__nav-burger-menu li > a:link {
+    font-size: 0.6rem;
+    color: white;
+    text-decoration: none;
+  }
+  .header__nav-burger-menu li > a:hover {
+    font-size: 0.6rem;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    padding: 0.4rem;
+    border-radius: 20px;
+  }
 }
 .header__nav-burger-click:checked ~ .header__nav-burger-menu {
   display: block;
@@ -82,10 +113,10 @@
   text-align: center;
 }
 .header__arrow {
-  position: relative;
+  position: absolute;
   left: 50%;
-  top: 5.5rem;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=header.css.map */
